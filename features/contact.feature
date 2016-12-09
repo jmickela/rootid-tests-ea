@@ -12,4 +12,4 @@ Feature: Contact Us
     And I should see "Email"
     And I should see "Our Locations"
     And I should see "Find us on social media too!"
-    And I should see the ".block-twitter-block" element
+    And I should see a ".block-twitter-block" element
