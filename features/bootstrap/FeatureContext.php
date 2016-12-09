@@ -74,7 +74,7 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     /**
      * @Then I should see :text in the :element element
      */
-    public function assertElementText($text, $selector) {
+    public function iShouldSeeinTheElement($text, $selector) {
         $page    = $this->getSession()->getPage();
         $element = $page->findAll('css', $selector);
 
