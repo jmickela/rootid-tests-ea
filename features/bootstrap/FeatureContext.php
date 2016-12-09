@@ -80,7 +80,7 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
         $found = false;
 
         foreach($this->getSession()->getPage()->findAll() as $element) {
-            if (strpos(strtolower($text), strtolower($element->getText()) !== false) {
+            if (strpos(strtolower($text), strtolower($element->getText()) !== false)) {
                 $found = true;
             }
         }
