@@ -5,7 +5,7 @@ Feature: Career Center
   and all local menu items
 
   Background:
-    Given I am on "/about/press-career-center"
+    Given I am on "/about/career-center"
 
   Scenario:
     Then I should see "Employment Opportunities"

@@ -11,7 +11,9 @@ Feature: Search Internships
   Background:
     Given I am on "/about/career-center/interns/available-internships-cfhc"
 
+  @javascript
   Scenario:
+    And I wait 1000 milliseconds
     Then I should see "Los Angeles County"
     And I should see "In/Out Of LA"
     And I should see "Outside Los Angeles"
