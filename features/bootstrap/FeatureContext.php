@@ -77,13 +77,14 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     public function iShouldSeeinTheElement($text, $selector) {
         $page    = $this->getSession()->getPage();
         $element = $page->findAll('css', $selector);
+        $found = false;
 
         foreach($this->getSession()->getPage()->findAll() as $element) {
             if (strpos(strtolower($text), strtolower($element->getText()) !== false) {
-                return;
+                $found = true;
             }
         }
-
-        throw Exception("Text '{$text}' is not found in the '{$selector}' element.");
+        if(!$found)
+            throw Exception("Text '{$text}' is not found in the '{$selector}' element.");
     }
 }
