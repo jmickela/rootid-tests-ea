@@ -47,6 +47,27 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
         assertNotNull($webElement, 'The button element was not found.');
 
         $webElement->click();
-    }    
+    }
 
+    /**
+     * @Then I wait :time milliseconds
+     */
+    function iWaitMilliseconds($time) {
+        $this->getSession()->wait($time);
+    }
+
+    /**
+     * @Then I should see :text if I wait :time milliseconds
+     */
+    public function iShouldSeeIfIWait($text, $time) {
+        $this->getSession()->wait($time);
+        $this->assertSession()->pageTextContains($text);
+    }
+
+    /**
+     * @Then I switch to the iframe :element
+     */
+    public function iSwitchToTheIframe($element) {
+        $this->getSession()->switchToIFrame($element);
+    }
 }

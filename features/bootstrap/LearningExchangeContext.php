@@ -116,4 +116,12 @@ class LearningExchangeContext extends RawMinkContext implements Context, Snippet
         $last_month = date('F', strtotime('next month'));
         $this->assertSession()->pageTextContains($last_month);
     }
+
+    /**
+     * @Then I should see the current month name
+     */
+    public function iShouldSeeTheCurrentMonthName() {
+        $this_month = date('F', strtotime('this month'));
+        $this->assertSession()->pageTextContains($this_month);
+    }
 }

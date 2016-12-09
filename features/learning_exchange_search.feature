@@ -11,17 +11,6 @@ Feature: Search Learning Exchange
   Background:
     Given I am on "/learning-exchange/calendar"
 
-  Scenario: Displaying the calendar
-    Then I should see a calendar element
-
-  Scenario: Displaying next month in the calendar
-    When I follow "Next »"
-    Then I should see the next month name
-
-  Scenario: Displaying previous month in the calendar
-    When I follow "« Prev"
-    Then I should see the previous month name
-
   Scenario Outline:
     When I fill in "keys" with "<search_term>"
     And I select "<option>" from "field_type_event_tid"
