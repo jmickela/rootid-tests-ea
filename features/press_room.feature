@@ -12,8 +12,6 @@ Feature: Press Room
     And I should see "Press Releases"
     And I should see "In the News"
     And I should see "Media Inquiries"
-    And I should see "Resource Category"
-    And I should see "Title X Extranet"
 
   Scenario Outline:
     Then I should see "<menu_item>"

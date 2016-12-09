@@ -12,6 +12,6 @@ Feature: Search Internships
     Given I am on "/about/career-center/interns/available-internships-cfhc"
 
   Scenario:
-    Then I should see "Los Angeles County" in "#edit-field-inside-outside-of-la-value"
-    And I should see "In/Out Of LA" in "#edit-field-inside-outside-of-la-value"
-    And I should see "Outside Los Angeles" in "#edit-field-inside-outside-of-la-value"
+    Then I should see "Los Angeles County" in the "#edit-field-inside-outside-of-la-value" element
+    And I should see "In/Out Of LA" in the "#edit-field-inside-outside-of-la-value" element
+    And I should see "Outside Los Angeles" in the "#edit-field-inside-outside-of-la-value" element
