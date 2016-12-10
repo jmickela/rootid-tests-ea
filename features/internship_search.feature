@@ -13,7 +13,7 @@ Feature: Search Internships
 
   @javascript
   Scenario:
-    And I wait 1000 milliseconds
+    And I wait 500 milliseconds
     Then I should see "Los Angeles County"
     And I should see "In/Out Of LA"
     And I should see "Outside Los Angeles"

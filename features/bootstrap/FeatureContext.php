@@ -87,4 +87,17 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
         if(!$found)
             throw Exception("Text '{$text}' is not found in the '{$selector}' element.");
     }
+
+    /**
+     * @Then I click the :element element
+     */
+    public function iClickTheElement($selector) {
+        $page = $this->getSession()->getPage();
+        $element = $page->find('css', $selector);
+
+        if(empty($element))
+            throw new Exception('Element not found.');
+
+        $element->click();
+    }
 }
