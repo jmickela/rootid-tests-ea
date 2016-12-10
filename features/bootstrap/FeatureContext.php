@@ -67,7 +67,7 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     /**
      * @Then I switch to the iframe :element
      */
-    public function iSwitchToTheIframe($element) {
+    public function iSwitchToIframe($element) {
         $this->getSession()->switchToIFrame($element);
     }
 

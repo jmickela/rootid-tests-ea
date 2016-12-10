@@ -12,5 +12,5 @@ Feature: Share Popup
     And I click the ".st_sharethis_custom" element
     And I wait 1000 milliseconds
     And I should see a ".stLframe" element
-    And I switch to iframe  "#stLframe"
+    And I switch to iframe "#stLframe"
     Then I should see "Share this with your friends"
