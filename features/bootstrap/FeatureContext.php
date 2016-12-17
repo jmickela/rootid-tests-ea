@@ -100,4 +100,15 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
 
         $element->click();
     }
+
+    /**
+     * @Then I submit form :form
+     */
+    public function iPressEnterIn($selector) {
+        $page = $this->getSession()->getPage();
+        $element = $page->find('css', $selector);
+        $element->submit();
+        //$element->focus();
+        //$element->keyPress(13);
+    }
 }
